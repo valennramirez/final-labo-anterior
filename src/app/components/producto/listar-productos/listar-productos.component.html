@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Marca</th>
+            <th>Cantidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listaProductos">
+            <td>{{p.nombre}}</td>
+            <td>{{p.marca}}</td>
+            <td>{{p.cantidad}}</td>
+            <td><button (click)="eliminarProducto(p.id)">Eliminar</button></td>
+            <td><a href="" >Editar</a></td>
+        </tr>
+    </tbody>
+</table>

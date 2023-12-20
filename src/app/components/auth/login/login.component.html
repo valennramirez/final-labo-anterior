@@ -1,0 +1,21 @@
+<fieldset>
+    <form id="formulario" [formGroup]="formulario">
+        <div>
+            <label for="">Username</label>
+            <input type="text" formControlName="username" required>
+
+            <div *ngIf="validar()">
+                <span>Ingresar username</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="">Password</label>
+            <input type="text" formControlName="password" required>
+
+            <div *ngIf="validar()">
+                <span>Ingresar password</span>
+            </div>
+        </div>
+    </form>
+</fieldset>

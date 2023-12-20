@@ -1,0 +1,39 @@
+<div>
+    <fieldset>
+        <legend>Add product</legend>
+        <form id="formulario" [formGroup]="formulario">
+            <div>
+                <label for="nombre"> Nombre del producto </label>
+                <input type="text" id="nombre" formControlName="nombre" required>
+
+                <div *ngIf="validar()">
+                    <span>Ingresar nombre</span>
+                </div>
+            </div>
+
+            <div>
+                <label for="marca">Marca</label>
+                <input type="text" id="marca" formControlName="marca" required>
+
+                <div *ngIf="validar()">
+                    <span>Ingresar marca</span>
+                </div>
+            </div>
+
+            <div>
+                <label for="cantidad">Cantidad</label>
+                <input type="text" id="cantidad" formControlName="cantidad" required>
+
+                <div *ngIf="validar()">
+                    <span>Ingresar cantidad</span>
+                </div>
+            </div>
+            
+            <input type="hidden" formControlName="id">
+
+        </form>
+
+        <input type="submit" (click)="addProducto()" value="Add">
+
+    </fieldset>
+</div>
